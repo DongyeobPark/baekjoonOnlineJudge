@@ -19,10 +19,10 @@ public class Q_1002 {
                 // 마린이 있을 수 있는 위치가 없음
                 System.out.println(0);
             } else {
-                int fromR1toR2 = (int) Math.sqrt(Math.pow((x1-x2), 2)+Math.pow((y1-y2), 2));
-                int shortLine = r1;
-                int longLine = r2;
-                int middleLine = fromR1toR2;
+                double fromR1toR2 = Math.sqrt(Math.pow((x1-x2), 2)+Math.pow((y1-y2), 2));
+                double shortLine = r1;
+                double longLine = r2;
+                double middleLine = fromR1toR2;
                 if (r1 > r2) {
                     shortLine = r2;
                     longLine = r1;
