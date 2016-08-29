@@ -8,9 +8,9 @@ public class Q_1003 {
         while (loopCount-- > 0) {
             BigInteger inputValue = new BigInteger(scInput.nextLine());
             if (inputValue.compareTo(new BigInteger("0")) == 0) {
-                System.out.println("0 1");
-            } else if (inputValue.compareTo(new BigInteger("1")) == 0) {
                 System.out.println("1 0");
+            } else if (inputValue.compareTo(new BigInteger("1")) == 0) {
+                System.out.println("0 1");
             } else if (inputValue.compareTo(new BigInteger("2")) == 0) {
                 System.out.println("1 1");
             } else {
