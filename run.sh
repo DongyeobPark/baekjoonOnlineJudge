@@ -3,13 +3,16 @@
 if [ $# -gt 0 ]
 then
     TEST_NUMBER="Q_"$1
-    SRC_DIR="./out/production/baekjoonOnlineJudge/"
+    CLASS_DIR="./out/production/baekjoonOnlineJudge/"
+    SRC_DIR="./src/"
     TEST_DIR="./src/test/"
 
-    if [ -f $SRC_DIR$TEST_NUMBER.class ]
+    javac -d $CLASS_DIR $SRC_DIR$TEST_NUMBER.java
+
+    if [ -f $CLASS_DIR$TEST_NUMBER.class ]
     then
         cat $TEST_DIR$TEST_NUMBER.txt;
-        cd $SRC_DIR;
+        cd $CLASS_DIR;
         java $TEST_NUMBER < ../../../$TEST_DIR$TEST_NUMBER.txt;
         cd ../../../;
     else
