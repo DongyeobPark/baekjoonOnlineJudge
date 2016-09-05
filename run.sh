@@ -12,6 +12,7 @@ then
     if [ -f $CLASS_DIR$TEST_NUMBER.class ]
     then
         cat $TEST_DIR$TEST_NUMBER.txt;
+        echo "";
         cd $CLASS_DIR;
         java $TEST_NUMBER < ../../../$TEST_DIR$TEST_NUMBER.txt;
         cd ../../../;
